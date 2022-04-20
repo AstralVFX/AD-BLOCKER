@@ -1,15 +1,23 @@
-(function() {
-    function a(a) {
-      try {
-        var c = new URL(a.src || "http://unknown-src").origin;
-        b.includes(c) || (a.parentElement.removeChild(a), console.log("SUCCESSFULLY REMOVED AD:", c))
-      } catch (a) {
-        console.log("ERROR REMOVING AD:", a)
-      }
+(function(){
+const exceptOrigins = [
+  'https://disqus.com',
+  document.origin
+];
+function remIF(e){
+  try{
+    var orgn = new URL(e.src || 'http://unknown-src').origin;
+    if( ! exceptOrigins.includes(orgn)){
+      e.parentElement.removeChild(e);
+      console.log('REMOVE IFRAME',orgn);
     }
-    const b = ["https://disqus.com", document.origin];
-    window.setInterval(function() {
-      for (var b of document.getElementsByTagName("iframe")) a(b)
-    }, 500)
-  })()
-}();
+  } catch(err) {
+    console.log('REMOVE ERROR',err);
+  }
+}
+function remIFs(){
+  for(var e of document.getElementsByTagName('iframe')){
+    remIF(e);
+  }
+}
+window.setInterval(remIFs,500);
+})();
