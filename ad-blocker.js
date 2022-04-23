@@ -10,5 +10,5 @@
   const b = ["https://disqus.com", document.origin];
   window.setInterval(function() {
     for (var b of document.getElementsByTagName("iframe")) a(b)
-  }, 1)
+  }, 300)
 })()
