@@ -18,13 +18,21 @@ window.setInterval(function yt() {
   } else {}
 }, 300);
 if (document.URL.indexOf("youtube.com") != -1) {
-  const click = (clazz) => {
-    const buttons = document.getElementsByClassName(clazz);
-    for (const button of buttons) {
-      button.click();
-      click("ytp-ad-skip-button-text");
-      click("ytp-ad-overlay-close-button");
+const clear = (() => {
+    const defined = v => v !== null && v !== undefined;
+    const timeout = setInterval(() => {
+        const ad = [...document.querySelectorAll('.ad-showing')][0];
+        if (defined(ad)) {
+            const video = document.querySelector('video');
+            if (defined(video)) {
+                video.currentTime = video.duration;
+            }
+        }
+    }, 500);
+    return function() {
+        clearTimeout(timeout);
     }
+})();
   }
   setInterval(yt, 300);
 } else {
