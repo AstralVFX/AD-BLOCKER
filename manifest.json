@@ -1,0 +1,17 @@
+{
+  "manifest_version": 1,
+  "name": "AD Blocker For Youtube",
+  "description": "Skip Youtube Ads Without Any Problems.",
+  "version": "1.0",
+  "icons": { "123": "icon123.png" },
+  "content_scripts": [
+    {
+      "matches": ["https://*.youtube.com/*"],
+      "js": ["ad_block.js"]
+    }
+  ]
+}
+
+// ICON
+// https://www.flaticon.com/authors/those-icons
+// https://www.flaticon.com/
