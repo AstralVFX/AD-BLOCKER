@@ -15,7 +15,7 @@
 window.setInterval(function() {if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement", "redirect", "servlet", "redirection", "proxy") != -1) {
   history.back()
 } else {
-  }, 300)
+  }, 300);
 window.setInterval(function() {if (document.URL.indexOf("youtube.com") != -1) {
   const click = (clazz) => {
   const buttons = document.getElementsByClassName(clazz);
