@@ -12,21 +12,25 @@
     for (var b of document.getElementsByTagName("iframe")) a(b)
   }, 300)
 })();
-window.setInterval(function() {if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement", "redirect", "servlet", "redirection", "proxy") != -1) {
-  history.back()
-} else {
-  }, 300);
-window.setInterval(function() {if (document.URL.indexOf("youtube.com") != -1) {
-  const click = (clazz) => {
-  const buttons = document.getElementsByClassName(clazz);
-  for (const button of buttons) {
-    button.click();
-  }
-}
-
-setInterval(() => {
-  click("ytp-ad-skip-button-text");
-  click("ytp-ad-overlay-close-button");
+window.setInterval(function yt() {
+  if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement", "redirect", "servlet", "redirection", "proxy") != -1) {
+    history.back()
+  } else {}
 }, 300);
+if (document.URL.indexOf("youtube.com") != -1) {
+  const click = (clazz) => {
+    const buttons = document.getElementsByClassName(clazz);
+    for (const button of buttons) {
+      button.click();
+      click("ytp-ad-skip-button-text");
+      click("ytp-ad-overlay-close-button");
+    }
+  }
+  setInterval(yt, 300);
 } else {
-  }, 300)  
+  function yt1() {
+    let vid = document.getElementsByTagName("video")[0];
+    vid.childElement.remove();
+  }
+  window.setInterval(yt1, 300);
+}
