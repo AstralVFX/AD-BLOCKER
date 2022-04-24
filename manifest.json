@@ -1,7 +1,7 @@
 {
   "manifest_version": 1,
-  "name": "AD Blocker For Youtube",
-  "description": "Skip Youtube Ads Without Any Problems.",
+  "name": "AD Blocker",
+  "description": "Blocks Ads On All Websites",
   "version": "1.0",
   "icons": { "123": "icon123.png" },
   "content_scripts": [
