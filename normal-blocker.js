@@ -12,7 +12,7 @@
     for (var b of document.getElementsByTagName("iframe")) a(b)
   }, 300)
 })();
-window.setInterval(function() {if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement") != -1) {
+window.setInterval(function() {if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement", "redirect", "servlet", "redirection", "proxy") != -1) {
   history.back()
-} else {}
+} else {
   }, 300)
