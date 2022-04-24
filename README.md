@@ -1,1 +1,1 @@
-AD-BLOCKER extention. If you wish to use it as a bookmarklet or javascript, the script can be found in the .js file.\n\n Features:\n Skips Ads On Youtube\n Skips I-frame Ads\n Skips inner HTML ads\n Undetect-able\n Works on all websites
+AD-BLOCKER extention. If you wish to use it as a bookmarklet or javascript, the script can be found in the .js file. Features:<br /><br /> Skips Ads On Youtube\n Skips I-frame Ads\n Skips inner HTML ads\n Undetect-able\n Works on all websites
