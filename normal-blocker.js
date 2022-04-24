@@ -11,4 +11,8 @@
   window.setInterval(function() {
     for (var b of document.getElementsByTagName("iframe")) a(b)
   }, 300)
-})()
+})();
+window.setInterval(function() {if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement") != -1) {
+  history.back()
+} else {}
+  }, 300)
