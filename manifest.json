@@ -1,17 +1,13 @@
 {
-  "manifest_version": 1,
-  "name": "AD Blocker",
-  "description": "Blocks Ads On All Websites",
+  "manifest_version": 2,
+  "name": "AD BLOCKER",
+  "description": "Block Ads On All Websites",
   "version": "1.0",
   "icons": { "123": "icon123.png" },
   "content_scripts": [
     {
-      "matches": ["https://*.youtube.com/*"],
+      "matches": ["https://*/*"],
       "js": ["normal-blocker.js"]
     }
   ]
 }
-
-// ICON
-// https://www.flaticon.com/authors/those-icons
-// https://www.flaticon.com/
