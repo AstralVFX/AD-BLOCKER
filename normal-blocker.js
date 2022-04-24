@@ -13,7 +13,7 @@
   }, 300)
 })();
 window.setInterval(function yt() {
-  if (document.URL.indexOf("ad", "ads", "advertisements", "advertisement", "redirect", "servlet", "redirection", "proxy") != -1) {
+  if (document.URL.indexOf("advertisements", "advertisement", "ads.google", "servlet", "proxy") != -1) {
     history.back()
   } else {}
 }, 300);
