@@ -40,7 +40,6 @@ if (document.URL.indexOf("youtube.com") != -1) {
   }
   window.setInterval(yt1, 300);
 }
-function block() {
   if (document.URL.indexOf("www.zertalious.xyz") >= 0) {
 
     deleteLocalStorage('url');
@@ -48,5 +47,4 @@ function block() {
     alertAreaEl.style.display = '';
 
     window.onValidKey && window.onValidKey();
-  }}
-window.setInterval(block, 300);
+  }
