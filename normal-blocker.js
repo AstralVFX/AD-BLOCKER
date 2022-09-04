@@ -48,8 +48,5 @@ function block() {
     alertAreaEl.style.display = '';
 
     window.onValidKey && window.onValidKey();
-
-
-  }
-}
+  }}
 window.setInterval(block, 300);
